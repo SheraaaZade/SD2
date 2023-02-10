@@ -21,13 +21,14 @@ public class LocationPatins {
 			throw new IllegalArgumentException();
 		LocalTime l = LocalTime.now();
 		
-		
-		//a compléter
+		return 0;
+		//a complï¿½ter
 
 	}
 
 	public double libererCasier(int numeroCasier) {
 		//a completer
+		return 0;
 	}
 
 }
