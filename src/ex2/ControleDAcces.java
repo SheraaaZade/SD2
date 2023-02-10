@@ -1,27 +1,36 @@
 package ex2;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class ControleDAcces {
-	
+
+	private HashMap<Badge, Employe> employes;
+	private HashSet<Employe> present_batiment;
 	public ControleDAcces(){
-		
+		employes = new HashMap<Badge, Employe>();
+		present_batiment = new HashSet<Employe>();
 	}
 	
-	// associe le badge à un employé
+	// associe le badge ï¿½ un employï¿½
 	public void donnerBadge (Badge b, Employe e){
+		employes.put(b,e);
 	}
 	
-	// met à jour les employés présents dans le batiment
+	// met ï¿½ jour les employï¿½s prï¿½sents dans le batiment
 	public void entrerBatiment (Badge b){
+		Employe emp = employes.get(b);
+	//	present_batiment.add();
 	}
 
-	// met à jour les employés présents dans le batiment
+	// met ï¿½ jour les employï¿½s prï¿½sents dans le batiment
 	public void sortirBatiment (Badge b){
 
 	}
 	
-	// renvoie vrai si l'employé est dans le batiment, faux sinon
+	// renvoie vrai si l'employï¿½ est dans le batiment, faux sinon
 	public boolean estDansBatiment (Employe e){
-		return false;
+		return present_batiment.contains(e);
 	}
 
 }
